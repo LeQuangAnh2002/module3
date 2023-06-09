@@ -50,9 +50,9 @@ join Product P on Odetail.ProductID  = P.ProductID
 
 -- "3.Hiển thị tên những khách hàng không mua bất kỳ một sản phẩm nào"
 select C.cID,C.cName from Customer C
-where not exists(select * from orderproduct where C.cID = cID)
+where not exists(select * from orderproduct where C.cID =cID)
 -- "4.Hiển thị mã hóa đơn, ngày bán và giá tiền của từng hóa đơn (giá một hóa đơn được tính bằng tổng giá bán của từng loại mặt hàng xuất hiện trong hóa đơn Giá bán của từng loại được tính = odQTY*pPrice)" 
-select O.OrderID, O.OrderDate,Ordetail.quantity,P.ProductName,O.Price,sum(Ordetail.quantity * O.Price) as tongTien
+select O.OrderID, O.OrderDate,Ordetail.quantity,P.ProductName,O.Price, sum(Ordetail.quantity * O.Price) as tongTien
 from orderproduct O inner join oderdetail Ordetail on O.OrderID =Ordetail.OrderID
 join Product P on Ordetail.ProductID  = P.ProductID
 group by Ordetail.OrderID, Ordetail.quantity,P.ProductName

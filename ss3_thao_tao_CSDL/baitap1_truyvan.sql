@@ -61,7 +61,7 @@ Where studentName like 'Hung%';
 use quanlysinhvien;
 select  S.StudentId,S.StudentName, Sub.SubName, M.Mark from students S
 inner join Mark M on S.StudentId = M.StudentId join Subject Sub on Sub.SubId = M.SubId 
-order by Mark desc;
+order by Mark desc,StudentName ;
 
 
 
