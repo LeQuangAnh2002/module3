@@ -2,9 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <style>
+        div.relative {
+            position: relative;
+            width: 400px;
+            height: 200px;
+            border: 1px solid #73AD21;
+        }
+        div.absolute {
+            position: absolute;
+            top: -1px;
+            left: 400px;
+            width: 200px;
+            height: 100px;
+            border: 1px solid #73AD21;
+            visibility: hidden;
+        }
+        div.relative:hover .absolute{
+            visibility: visible;
+        }
+    </style>
 </head>
 <body>
-$END$
+<h2>position: relative;</h2>
+
+<p>An element with position: relative; is positioned relative to its normal position:</p>
+
+<div class="relative">
+    This div element has position: relative;
+    <div class="absolute">This div element has position: absolute;</div>
+</div>
 </body>
 </html>

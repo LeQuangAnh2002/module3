@@ -1,0 +1,125 @@
+html{
+    font-size: 62.5%;
+
+}
+body{
+    font-family: Arial;
+    padding: 20px;
+}
+.cards{
+    display: flex;
+    margin-left:  -20px;
+
+}
+.card{
+    border-radius: 20px;
+    /*tìm hiểu overflow*/
+    overflow: hidden;
+    background-color: white;
+    border: 1px solid grey;
+    margin-left: 20px ;
+    width: calc(25% - 20px);
+
+}
+.card-image{
+    height: 200px;
+    width: 100%;
+    /*tìm hiểu object-fit*/
+    object-fit : cover;
+    flex-shrink: 0;
+}
+.card-top{
+    padding: 25px;
+}
+.card-title{
+    font-weight: 500;
+    margin-bottom: 25px;
+    /*tìm hiểu word-break*/
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-box-orient:vertical ;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+.card-user{
+    display: flex;
+    align-items: center;
+}
+.card-user-avatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    object-fit: cover;
+    flex-shrink:0  ;
+}
+.card-user-info{
+    padding-left: 15px;
+    flex: 1;
+}
+.card-user-top{
+    display: flex;
+    align-items: center;
+
+}
+.card-user-name {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1;
+}
+.card-user-game{
+    color: #999;
+    font-weight: 300;
+    font-size: 13px;
+}
+.card-bottom{
+    padding: 25px;
+    border-top: 1px solid grey ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-live{
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: #ff6651;
+}
+.card-watching{
+    font-weight: 300;
+    font-size: 13px;
+    color:#999;
+
+}
+.card-content{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+.card-top{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.card-bottom, .card-user{
+    margin-top: auto;
+    flex-shrink: 0;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+}
+@media screen and (max-width: 767px) {
+    .card {
+        border-radius: 20px;
+        /*tìm hiểu overflow*/
+        overflow: hidden;
+        background-color: white;
+        border: 1px solid grey;
+        margin-left: 30px;
+        width: calc(100% - 30px);
+        flex-wrap:wrap ;
+    }
+}

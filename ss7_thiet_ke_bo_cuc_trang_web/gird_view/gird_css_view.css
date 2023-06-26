@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial;
+    padding: 20px;
+}
+.item{
+    /*nhớ tắt boder*/
+    /*border: 1px solid grey;*/
+    min-height: 60px;
+}
+.container{
+    display: grid;
+
+    grid-template-columns: repeat(6,1fr);
+    /*grid-template-rows: 100px 1fr 100px;*/
+    grid-auto-rows: minmax(60px,auto);
+
+    grid-template-areas:
+    "header header header header header header"
+    "menu main main main main right"
+    "footer footer footer footer footer footer";
+
+}
+.item1 {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+
+}
+.item1 .itemson1{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+#menu{
+    width: auto;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    background-color: #222222;
+
+
+}
+
+#menu ul, #menu li{
+
+    padding:0;
+    margin: 0;
+
+}
+#menu li{
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#menu li a{
+        text-decoration: none;
+        line-height: 60px;
+        color: #939B9D;
+        padding: 0 24px;
+        text-align: center;
+        display: inline-block;
+}
+#menu li:hover a{
+    background-color: #080808;
+    color: white;
+}
+.itemson2{
+    background-color: #222222;
+}
+.itemson2 .login-btn{
+   text-align: right;
+}
+.itemson2 .login-btn a{
+    line-height: 60px;
+    padding: 0 20px;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+}
+.itemson2 .login-btn:hover a{
+    background-color: #080808;
+    color: white;
+}
+/*MENU BAR*/
+.item2 { grid-area: menu;
+    padding: 15px;
+    width: 250px;
+    background-color: #F1F1F1;
+
+}
+
+.menu-bar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu-bar li{
+    background-color: #33b5e5;
+
+    height: 40px;
+    margin-bottom: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+ .menu-bar li a{
+
+    padding: 0 10px;
+     text-decoration: none;
+     line-height: 40px;
+     display: block;
+     color: white;
+
+}
+ .menu-bar li:hover a{
+     background-color: #0099cc;
+ }
+
+/*CONTENT*/
+.item3 { grid-area: main;
+    padding: 15px}
+.item3 .text-content{
+
+    /*border-bottom: 1px solid grey;*/
+    margin-bottom: 20px;
+}
+.item3 .text-lorem{
+    border-top: 1px solid grey;
+}
+.item3 .text-lorem h1{
+    padding: 24px 0 0 0;
+}
+/*RIGHT*/
+.item4 { grid-area: right;
+    width: 250px;
+    background-color: #F1F1F1;
+
+
+}
+.item4  .right-put{
+    padding: 15px;
+}
+.item4 .right-put ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+
+}
+.item4 .right-put li{
+    width: 220px;
+    height: 80px;
+
+    margin-bottom: 15px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.item4 .right-put li a{
+    background-color: #F5F5F5;
+    text-decoration: none;
+    display: block;
+    line-height: 80px;
+    text-align: center;
+    color: black;
+}
+/*FOOTER*/
+.item5 { grid-area: footer;
+    background-color: #555555;
+}
+.item5 p{
+    text-align: center;
+    line-height: 60px;
+    font-size: 20px;
+}
+
+
+
