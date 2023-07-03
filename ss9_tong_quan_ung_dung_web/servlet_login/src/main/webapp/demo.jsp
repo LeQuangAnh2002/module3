@@ -13,7 +13,7 @@
     }
 </style>
 <body>
-<form action="/login" method="post">
+<form action="login" method="post">
     <div class="login">
         <h2>Login</h2>
         <input type="text" name="username" size="30"  placeholder="username" />
